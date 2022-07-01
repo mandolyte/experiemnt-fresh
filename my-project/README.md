@@ -89,3 +89,15 @@ In this example: https://fresh.deno.dev/docs/getting-started/fetching-data,
 data is fetched from Github and then returned via the context (the render function actually).
 
 The component then is provided the data via its properties.
+
+### Islands
+
+Fresh supports the Island Architecture. Link: https://jasonformat.com/islands-architecture/.
+
+The idea is that in a mostly static page, there will be small bits of highly interactive components.
+Thus the term "islands" -- in the midst of an ocean.
+
+In the example, a countdown component is created in the islands folder.
+Then a page is created under the routes folder to use it.
+- Component: `islands/Countdown.tsx`
+- Page (route): `routes/countdown.tsx`
