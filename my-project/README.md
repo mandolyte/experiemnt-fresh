@@ -101,3 +101,16 @@ In the example, a countdown component is created in the islands folder.
 Then a page is created under the routes folder to use it.
 - Component: `islands/Countdown.tsx`
 - Page (route): `routes/countdown.tsx`
+
+Note that the countdown component looks familiar since it uses useEffect/useState, etc. -- 
+just normal parts of React. Remember is use `preact` version of React. Thus the import:
+```ts
+import { useEffect, useState } from "preact/hooks";
+```
+
+
+### Deploy
+
+This [section](https://fresh.deno.dev/docs/getting-started/deploy-to-production) is about
+deploying to the deno edge. Similar to netlify, I assume. But I decided not to try that.
+
