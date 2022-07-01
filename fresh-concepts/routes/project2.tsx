@@ -3,7 +3,9 @@
 /** @jsx h */
 import { h } from "preact";
 import { Handlers, PageProps } from "$fresh/server.ts";
-import ReactJson from "https://esm.sh/react-json-view";
+// import React from "https://esm.sh/react";
+// import document from "https://esm.sh/react-dom";
+// import ReactJson from "https://esm.sh/react-json-view";
 // import ReactJson from 'react-json-view';
 
 
@@ -25,14 +27,22 @@ export default function ProjectPage(props: PageProps<string>) {
     <div>
       <h1>{props.data}</h1>
     </div>
+    // <ReactJson
+    //   style={{ maxHeight: '500px', overflow: 'scroll', whiteSpace: 'pre' }}
+    //   src={props.data}
+    //   theme="monokai"
+    // />
   );
 }
 
 /*
+    <div>
+      <h1>{props.data}</h1>
+    </div>
 
-      <ReactJson
-        style={{ maxHeight: '500px', overflow: 'scroll', whiteSpace: 'pre' }}
-        src={props.data}
-        theme="monokai"
-      />
+    <ReactJson
+      style={{ maxHeight: '500px', overflow: 'scroll', whiteSpace: 'pre' }}
+      src={props.data}
+      theme="monokai"
+    />
 */
