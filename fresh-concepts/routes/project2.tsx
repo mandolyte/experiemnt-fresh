@@ -17,7 +17,7 @@ import { Handlers, PageProps } from "$fresh/server.ts";
 export const handler: Handlers = {
   async GET(_req, ctx) {
     // const project = await db.projects.findOne({ id: ctx.params.id });
-    const project = JSON.stringify({name: "Cecil's Project", stars: 123});
+    const project = JSON.stringify({name: "Cecil's Project", stars: 123}, null, '  ');
     return ctx.render(project);
   },
 };
@@ -25,7 +25,7 @@ export const handler: Handlers = {
 export default function ProjectPage(props: PageProps<string>) {
   return (
     <div>
-      <h1>{props.data}</h1>
+      <pre>{props.data}</pre>
     </div>
     // <ReactJson
     //   style={{ maxHeight: '500px', overflow: 'scroll', whiteSpace: 'pre' }}
