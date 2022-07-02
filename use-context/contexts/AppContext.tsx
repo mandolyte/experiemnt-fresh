@@ -10,12 +10,17 @@ export default function AppContextProvider({
 {
   const [num, setNum] = useState(42)
 
+  const debugFunction = (msg: string) => {
+    console.log("debugFunction()", msg)
+  }
+
   const context = {
       state: {
           num,
       },
       actions: {
           setNum,
+          debugFunction,
       },
   }
   return (
